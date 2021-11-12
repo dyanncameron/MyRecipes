@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RecipeApp.RecipeEntryPage"
+    Title="Recipe Entry">
+  <!-- Layout children vertically -->
+    <StackLayout Margin="20">
+        <Editor Placeholder="Recipe Name"
+                Text="{Binding Name}"
+                HeightRequest="100" />
+        <Editor Placeholder="Author"
+                Text="{Binding Author}"
+                HeightRequest="100" />
+        <Editor Placeholder="Ingredients"
+                Text="{Binding Ingredients}"
+                HeightRequest="100" />
+        <Editor Placeholder="Steps"
+                Text="{Binding Steps}"
+                HeightRequest="100" />
+        <!-- Layout children in two columns -->
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Save"
+                    BorderWidth="5" 
+                    BorderRadius="1" 
+                    BorderColor="Silver"
+                    FontAttributes="Bold"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    BorderWidth="5" 
+                    BorderRadius="1" 
+                    BorderColor="Silver"
+                    FontAttributes="Bold"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

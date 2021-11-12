@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeApp.Views.AboutPage"
+             Title="About">
+    <!-- Layout children in two rows -->
+    <Grid RowDefinitions="Auto,*">
+        <Image Source="My.png"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
+               VerticalOptions="Center"
+               HeightRequest="200" />
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Margin="20"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="About My Recipes App"
+                                  FontAttributes="Bold"
+                                  FontSize="28"/>
+                                  
+                            
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="This app is where you able to save all your favourite recipes and see them listed."
+                   FontSize="20"/>
+           
+        </StackLayout>
+    </Grid>
+</ContentPage>
